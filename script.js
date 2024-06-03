@@ -84,6 +84,7 @@ startBtn.addEventListener("click", startGame);
 
 // Event listener to handle mouse clicks
 window.addEventListener("click", (e) => {
+  document.getElementById("clickSound").play();
   // Only proceed if the game has started
   if (!gameStarted) return;
 
