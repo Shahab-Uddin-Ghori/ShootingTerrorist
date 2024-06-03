@@ -1,0 +1,89 @@
+/* Reset default browser styles for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  cursor: none; /* Hide the default cursor */
+}
+
+/* Style the body with a background image, covering the entire viewport */
+body {
+  background: url(./img/download.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+/* Define styles for the container element */
+.container {
+  position: relative;
+  overflow: hidden; /* Hide overflow content */
+  height: 100%; /* Full height of the viewport */
+}
+
+/* Style the custom cursor */
+.cursor {
+  position: absolute;
+  height: 70px;
+  width: 50px;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* Make the cursor non-interactive */
+  z-index: 2; /* Ensure it is above other elements */
+  transition: .3s transform ease; /* Smooth transition for transformations */
+  transform-origin: 100% 100%;
+}
+
+/* Style the start button */
+.button {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000; /* Text color */
+  border: 3px solid; /* Border styling */
+  padding: 0.25em 0.5em;
+  box-shadow: 
+    1px 1px 0px 0px,
+    2px 2px 0px 0px,
+    3px 3px 0px 0px,
+    4px 4px 0px 0px,
+    5px 5px 0px 0px; /* Shadow effect */
+  position: fixed;
+  bottom: 8rem;
+  left: 45%;
+  user-select: none; /* Disable text selection */
+  -webkit-user-select: none; /* Disable text selection for Webkit browsers */
+  touch-action: manipulation; /* Disable touch interactions */
+}
+
+/* Style the button when it is active (clicked) */
+.button:active {
+  box-shadow: 0px 0px 0px 0px; /* Remove shadow */
+  bottom: 7.9rem;
+  left: 44.8%;
+}
+
+/* Change cursor to pointer when hovering over the button */
+.button:hover {
+  cursor: pointer;
+}
+
+/* Style the blood spot element */
+.bloodSpot {
+  position: relative;
+  height: 80px;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+/* Style the terrorist image */
+.terrorist {
+  height: 100px;
+}
+
+/* Make sure selected text does not affect images */
+img::selection {
+  background: transparent;
+}
