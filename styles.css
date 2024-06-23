@@ -74,7 +74,7 @@ body {
 .bloodSpot {
   position: relative;
   height: 80px;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -350%);
   z-index: 2;
 }
 
@@ -86,4 +86,7 @@ body {
 /* Make sure selected text does not affect images */
 img::selection {
   background: transparent;
+}
+#emoji img{
+  width: 400px;
 }
